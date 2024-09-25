@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IntelliConverse</title>
+     <link rel="stylesheet" href="static/css/chatStyle.css">
+</head>
+<style>
+
+    body {
+    background-image: url('static/images/c1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+</style>
+<body>
+    <div id="sidebar">
+        <div>
+             <h1><img src="https://www.quanticsolutions.my/wp-content/uploads/2022/07/dwf-robo.gif" alt="Logo">IntelliConverse</h1>
+            <ul>
+            <ul>
+                <li><a href="#" onclick="showChat()">Chat</a></li>
+                <li><a href="#" onclick="showDocumentScanner()">Document Scanner</a></li>
+            </ul>
+            <div id="history">
+                <h2>History</h2>
+                <ul id="history-list">
+                    <div id="history">
+                        <ul id="history-list">
+                            <!-- Initial message indicating no history found -->
+                            <li id="no-history">No history found</li>
+                        </ul>
+                    </div>
+
+                </ul>
+            </div>
+        </div>
+        <div>
+            <ul>
+                <li><a href="#">✨IntelliConverse✨</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="chat-container">
+        <div id="chat-header">
+            <h2>How can I help you today?</h2>
+        </div>
+        <div id="chat-box"></div>
+        <div id="input-container">
+            <input type="text" id="user-input" placeholder="Message IntelliConverse">
+            <button id="send-button">Send</button>
+        </div>
+    </div>
+
+    <div id="document-scanner-container">
+        <div id="document-scanner-header">
+            <h2>Upload Document and Ask Questions</h2>
+        </div>
+        <div id="document-scanner-box">
+            <div class="upload-section" onclick="document.getElementById('file-input').click();">
+                <input type="file" id="file-input" accept=".pdf" onchange="uploadFile()">
+                <label for="file-input">
+                        <path d="M.5 9.9a.5.5 0 0 1 .5-.5H4v3.9c0 .516.168.912.447 1.18.282.27.667.42 1.053.42h4a1.5 1.5 0 0 0 1.5-1.5V9.4h3a.5.5 0 0 1 0 1H13v3.9a2.5 2.5 0 0 1-2.5 2.5h-4a2.5 2.5 0 0 1-2.5-2.5V9.4H1a.5.5 0 0 1-.5-.5zM13.5 8a.5.5 0 0 .5.5.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h11zM8 1a.5.5 0 0 1 .5.5v6.9l2.15-2.15a.5.5 0 0 1 .7.7l-3 3a.5.5 0 0 1-.7 0l-3-3a.5.5 0 1 1 .7-.7L7.5 8.4V1.5A.5.5 0 0 1 8 1z"/>
+                    </svg>
+                    📤 Click to upload PDF
+                </label>
+            </div>
+            <div id="uploaded-filename"></div>
+        </div>
+        <div id="document-scanner-input-container">
+            <input type="text" id="document-scanner-input" placeholder="Ask a question about the document">
+            <button id="document-scanner-send-button">Send</button>
+        </div>
+    </div>
+    <script type="text/javascript" src="static/js/chatScript.js"></script>
+</body>
+</html>
